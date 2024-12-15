@@ -1,0 +1,53 @@
+{
+  "name": "@forebase/core",
+  "type": "module",
+  "private": true,
+  "version": "0.1.0",
+  "author": {
+    "name": "Surendar Naredla",
+    "email": "surendar.naredla@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forebase/forebase",
+    "directory": "packages/forebase"
+  },
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "forebase": "./forebase.mjs"
+  },
+  "files": [
+    "*.cjs",
+    "*.d.cts",
+    "*.d.ts",
+    "*.mjs",
+    "bin",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./index.d.cts",
+        "default": "./index.cjs"
+      }
+    },
+    "./*": "./*"
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+  },
+
+  "engines": {
+    "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
+  },
+  "packageManager": "pnpm@8.6.12"
+}

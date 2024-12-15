@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["esnext"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "~/*": ["./packages/forebase/*"]
+    },
+    "strict": true,
+    "declaration": true,
+    "noEmit": true,
+    "stripInternal": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}

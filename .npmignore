@@ -1,0 +1,32 @@
+# Log files
+*.log
+npm-debug.log*
+
+# Ignore the VSCode folder
+.vscode/
+
+# Coverage directory used by tools like istanbul
+coverage
+.nyc_output
+
+# Dependency directories (node_modules should not be included)
+node_modules
+
+# npm package lock files (only required in the development environment)
+pnpm-lock.yaml
+
+# Project files (exclude source code, tests, examples, and configuration files)
+src
+test
+examples
+apps
+packages
+
+# Miscellaneous project files (not needed in the npm package)
+CHANGELOG.md
+.travis.yml
+.editorconfig
+.eslintignore
+.eslintrc
+.babelrc
+.gitignore

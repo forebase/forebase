@@ -1,0 +1,5 @@
+# Set default behavior to automatically normalize line endings for text files
+* text=auto
+
+# Force Unix line endings (LF) for all files in the repository (recommended for cross-platform teams)
+* text eol=lf
