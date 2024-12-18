@@ -1,29 +1,25 @@
 {
-  // Enable the ESlint flat config support
-  "eslint.useFlatConfig": true,
-
-  // Disable the default formatter, use eslint instead
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
-
-  // Auto fix
+  // Prettier configuration
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 120,
+  "prettier.useTabs": false,
+  // Default formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Format on save
+  "editor.formatOnSave": true,
+  // ESLint integration
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
+    "source.fixAll.eslint": "explicit"
   },
-
-
-  // Enable eslint for all supported languages
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
     "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml"
+    "svelte"
   ]
 }
