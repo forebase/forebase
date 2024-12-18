@@ -20,7 +20,7 @@ export async function compile(configs: RollupOptions | RollupOptions[]) {
         // Write each output
         return Promise.all(outputs.map((output) => bundle.write(output)));
       } catch (error) {
-        console.error(`Error building config:`, config);
+        console.error(`Error building config:`, config.input);
         throw error;
       }
     }),

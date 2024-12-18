@@ -40,14 +40,15 @@
     },
     "./*": "./*"
   },
-  "scripts": {
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-  },
-
   "engines": {
     "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
   },
-  "packageManager": "pnpm@8.6.12"
+  "packageManager": "pnpm@8.6.12",
+  "dependencies": {
+    "cac": "^6.7.14",
+    "vite": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2"
+  }
 }
