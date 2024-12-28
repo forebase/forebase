@@ -1,4 +1,7 @@
 {
+  "exclude": [
+    "node_modules"
+  ],
   "compilerOptions": {
     "target": "ESNext",
     "lib": [
@@ -6,11 +9,6 @@
     ],
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "paths": {
-      "~/*": [
-        "./packages/forebase/*"
-      ]
-    },
     "strict": true,
     "declaration": true,
     "noEmit": true,

@@ -14,13 +14,15 @@ export async function buildWatch(config: RollupWatchOptions | RollupWatchOptions
 
   // Event listener to log different stages of the build process
   const listern = async (event) => {
-    // Build full file path from the event
-    const fullPath = path.join(process.cwd(), event.input || "");
-    const segments = fullPath.split(path.sep);
+    // // Extract package name from path segments
+    let segment = "packages";
+    const segments =
+      event.input && Array.isArray(event.input) ? event.input[0] || event.input : null;
 
-    // Extract package name from path segments
-    const packagesIndex = segments.indexOf("packages");
-    const result = segments.slice(packagesIndex + 1)[0];
+    if (segments) {
+      const packagesIndex = segments.split(path.sep).indexOf("packages");
+      segment = segments.split(path.sep).slice(packagesIndex + 1)[0];
+    }
 
     // Handle different Rollup event types
     switch (event.code) {
@@ -31,12 +33,12 @@ export async function buildWatch(config: RollupWatchOptions | RollupWatchOptions
 
       case "BUNDLE_START":
         // Rebuild has started
-        console.log(`Bundling ${chalk.cyan(result)}: Rebuilding...`);
+        console.log(`Bundling ${chalk.cyan(segment)}: Building...`);
         break;
 
       case "BUNDLE_END":
         // Rebuild is successful
-        console.log(`Bundling ${chalk.cyan(result)}: ${chalk.green("Rebuild successful!")}`);
+        console.log(`Bundling ${chalk.cyan(segment)}: ${chalk.green("Build successful!")}`);
         break;
 
       case "END":

@@ -89,7 +89,7 @@ export default [
     ...prettierConfig,
     rules: {
       ...prettierConfig.rules,
-      "max-len": ["error", { code: 120, ignoreComments: true }],
+      "max-len": ["error", { code: 150, ignoreComments: true }],
     },
   },
   {
